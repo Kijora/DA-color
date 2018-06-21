@@ -1,0 +1,180 @@
+<html>
+
+<head>
+	
+	
+	
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js">
+</script>
+	<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBELocOV3nri3-uFr6quw07ec95ye0R9GU",
+    authDomain: "duck-army.firebaseapp.com",
+    databaseURL: "https://duck-army.firebaseio.com",
+    projectId: "duck-army",
+    storageBucket: "duck-army.appspot.com",
+    messagingSenderId: "489821502160"
+  };
+  firebase.initializeApp(config);
+</script>
+	
+		
+	
+<script>
+	
+var w = window.prompt ("Do you believe the Duck Army shall conquer?! (answer yes or no)");
+console.log(w);
+function showcomments (snapshot){ 
+	console.log (snapshot.val())
+	var commentbox = document.getElementById("Comments");
+	commentbox.innerHTML = snapshot.val().comment;
+}
+if (w ==="quack"){
+  alert (" YOU ARE WORTHY! I hope you are all doing well, for indeed it is a fine day. The sun is shining, the air is crisp, and overall, today is a wonderful day. There is much to do, for human (and duck) lives are short. Make the most of today before tomorrow comes. However, apparently you can never be in tomorrow. It is always a just out of reach. Eluding the grasp of man and duck kind. Thus, you should make the most of every day!");
+ 
+function StartDA(){
+	var database=firebase.database();
+	database.ref("comments").on("value", showcomments);
+var audio = new Audio('Battle_Lines.mp3');
+audio.play();
+}
+}
+else if (w ==="no"){
+  
+	alert("YOU SHALL REGRET THIS!");
+	window.location = "deathpage.html"
+}
+else if (w ==="yes"){
+	alert("YOUR CONFIDENCE IS APPRECIATED, BUT YOU ARE NOT A TRUE DUCK ARMY MEMBER. WADDLE AWAY WHILE YOU STILL CAN!!");
+	window.location = "deathpage.html"
+}
+else{
+	alert("INCORRECT")
+	window.location = "deathpage.html"
+}
+	
+	function Button_clicked(){
+	
+		document.getElementById("Comment");
+		var textbox = document.getElementById("Comment");
+		var commentbox = document.getElementById("Comments");
+		var newcomment = "<div style='border-style:solid;margin:5px'><pre style='color:blue; font-family:Times New Roman'>"+textbox.value+"</pre></div>"
+		commentbox.innerHTML = commentbox.innerHTML+newcomment;
+		var database = firebase.database();
+		database.ref("comments").set ({comment:commentbox.innerHTML});
+		
+		textbox.value = "";
+		return false;
+	
+	}
+	function clear_evidence(){
+	
+		
+		var database = firebase.database();
+		database.ref("comments").set ({comment:""});
+		
+		textbox.value = "";
+		return false;
+	
+	}
+function Duck_Growing(N){
+   var final_size = 33.3;
+   return final_size /(6-N);
+}
+window.onload = StartDA;
+</script>
+	
+	
+<style>
+	#QUACK{ 
+				font-size:200%;
+				color:blue;
+				text-align:center;
+				text-decoration: underline;
+	}
+		
+		
+	#SQUACK{		font-size:150%
+				color:blue;
+				text-align:center;
+				text-decoration: bold;
+	}
+	
+	#BEAK{
+				text-align:center;}
+       .top_objects_debug{
+				float:left;
+				display:inline;
+				width:33.3%;
+	}
+	#WEBBED{		text-align:center;
+				color:blue;
+				font-size:100%;
+	}
+	#HEADER{
+					text-align:center;
+	}
+		
+				body{ background:yellow;
+	}
+	#img-container{
+		text-align:center;
+
+	}
+</style>
+</head>
+<body>
+	
+		<div id="img-container">
+			<img style="width:30%; display: inline-block;"  src="Duck_imgs\Duck_img_flip.jpg">
+			<div style="width:30%; color:blue; display: inline-block;">
+ <p style ="text-decoration: bold; font-size: 150%; text-decoration: underline;" >THE OFFICIAL DUCK ARMY WEBSITE</p>
+<p>KNOWN ALLIES:
+			<ul>
+				<li><a href="https://en.wikipedia.org/wiki/Armadillo">Armadillos</a>
+				<li><a href="https://en.wikipedia.org/wiki/Cuttlefish">Cuttlefish</a>
+				<li><a href="https://en.wikipedia.org/wiki/Goose">Geese</a>
+				<li><a href="https://en.wikipedia.org/wiki/Jellyfish">Jellyfish</a>
+				<li><a href="https://en.wikipedia.org/wiki/Pangolin">Pangolins</a>
+				<li><a href="https://en.wikipedia.org/wiki/Platypus">Platypus</a>
+				<li><a href="https://en.wikipedia.org/wiki/Raccoon">Raccoons</a>
+				<li><a href="https://en.wikipedia.org/wiki/Rat">Rats</a>
+        <li><a href="https://en.wikipedia.orf/wiki/Sheep">Sheep</a>
+				<li><a href="https://en.wikipedia.org/wiki/Shrimp">Shrimp</a>
+				<li><a href="https://https://guardup.com/">Silver Citadel</a>
+				<li><a href="https://en.wikipedia.org/wiki/Snake">Snakes</a>
+				<li><a href="https://en.wikipedia.org/wiki/Turkey_(bird)">Turkeys</a>
+			</ul>
+</p> </div>
+			<img style="width:30%; display: inline-block;" src="Duck_imgs\Duck_img.jpg">
+		</div>
+				<div id = "ALLY">
+			
+		
+			</p>
+		</div>
+
+	<div id = "HEADER">
+		
+		
+		
+		
+	</div>
+<div id="WEBBED">
+<p>This is the Duck Army. Our purpose is to eventually conquer the world! You may think that this is ridiculous, that rubber ducks couldn't possibly take over. However you are wrong. Very wrong. We have allies constructing robots for us ducks, and I bet that you see our allies every day. Have you ever seen a goose? Maybe you've seen a real live duck! There are so many more as well. Join us. Join the Duck Army, and when we conquer, you shall be rewarded. Our hope is that no deaths shall come from this invasion. We shall conquer with force if necessary, yet if everyone here could spread the word of our growing power, it may not be needed. It is on this website that we communicate with our allies and plot the demise of our <a onclick="clear_evidence()">enemies</a>. We console each other in our losses, and celebrate our accomplishments. Whatever comes, we face it with our beaks high. We are the Duck Army. 
+</p>
+</div>
+	<div id = Comments>
+		
+	</div>
+<form>
+	
+<textarea rows="4" id = "Comment" style = "width:100%">
+</textarea>
+	<button onclick ="return Button_clicked();">
+		Submit
+	</button>
+</form>
+</body>
+</html>
