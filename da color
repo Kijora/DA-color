@@ -128,7 +128,7 @@ window.onload = StartDA;
 	
 		<div id="img-container">
 			<img style="width:30%; display: inline-block;"  src="Duck_imgs\Duck_img_flip.jpg">
-			<div style="width:30%; color:blue; display: inline-block;">
+			<div style="width:30%; color:purple; display: inline-block;">
  <p style ="text-decoration: bold; font-size: 150%; text-decoration: underline;" >THE OFFICIAL DUCK ARMY WEBSITE</p>
 <p>KNOWN ALLIES:
 			<ul>
@@ -140,7 +140,7 @@ window.onload = StartDA;
 				<li><a href="https://en.wikipedia.org/wiki/Platypus">Platypus</a>
 				<li><a href="https://en.wikipedia.org/wiki/Raccoon">Raccoons</a>
 				<li><a href="https://en.wikipedia.org/wiki/Rat">Rats</a>
-        <li><a href="https://en.wikipedia.orf/wiki/Sheep">Sheep</a>
+        			<li><a href="https://en.wikipedia.orf/wiki/Sheep">Sheep</a>
 				<li><a href="https://en.wikipedia.org/wiki/Shrimp">Shrimp</a>
 				<li><a href="https://https://guardup.com/">Silver Citadel</a>
 				<li><a href="https://en.wikipedia.org/wiki/Snake">Snakes</a>
